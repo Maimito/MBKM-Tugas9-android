@@ -30,7 +30,6 @@ public class AddFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    private TextInputEditText mNamaLengkap;
     private TextInputEditText mEmail;
     private TextInputEditText mPassword;
     private ActionProcessButton mDeleteAll;
@@ -77,7 +76,6 @@ public class AddFragment extends Fragment {
         // Inflate the layout for this fragment
         View root = inflater.inflate(R.layout.fragment_add, container, false);
 
-        mNamaLengkap = (TextInputEditText) root.findViewById(R.id.namaLengkap);
         mEmail = (TextInputEditText) root.findViewById(R.id.email);
         mPassword = (TextInputEditText) root.findViewById(R.id.password);
         mDeleteAll = (ActionProcessButton) root.findViewById(R.id.deleteAll);
@@ -97,7 +95,6 @@ public class AddFragment extends Fragment {
     public void deleteAllData(){
         mDeleteAll.setMode(ActionProcessButton.Mode.PROGRESS);
         mDeleteAll.setProgress(0);
-        mNamaLengkap.setText("");
         mEmail.setText("");
         mPassword.setText("");
         mDeleteAll.setProgress(100);
